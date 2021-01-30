@@ -26,5 +26,6 @@ var svg = d3
 var chartGroup = svg.append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
-// Query URLs for the data 
-var queryUrl2019 = `https://opendata.fcgov.com/resource/8n27-taq6.json?$date=>=01-Jan-2019and<01-Jan-2021$$app_token=${appToken}`;
+// Query URL for the data 
+var queryUrl2019 = `https://opendata.fcgov.com/resource/8n27-taq6.json?$where=datenum%3E=20190101&$$app_token=${appToken}`;
+// console.log(queryUrl2019)
