@@ -1,19 +1,98 @@
 var appToken = app_token;
 
-/** Function setup to grab values
-* @param {array} rows
-* @param {integer} index
-* index 1 - Date
-* index 7 - Poudre_raw_turbidity
-* index 11 - Horsetooth_raw_turbidity
-* index 15 - Finished_water_turbidity
-*/
+// Query URL for the data 
+var queryUrl = `https://opendata.fcgov.com/resource/8n27-taq6.json?$where=datenum%3E=20190101&$$app_token=${appToken}`;
+console.log(queryUrl)
 
-function unpack(rows, index){
-    return rows.map(function(row) {
-        return row[index];
+// Function to extract data and put into a visible table
+function getWaterData() {
+    queryUrl;
+    d3.json(queryUrl, function(data) {
+        console.log(data);
+        for (var i = 0; i < length; i++);
+            var water_data = data[i]; 
+                console.log(water_data);
+            // var dates = data[0];
+            // console.log(dates);
+            // var poudreturb = data[1];
+            // console.log(poudreturb);
+            // var horsetoothturb = data[2];
+            // console.log(horsetoothturb);
+            // var finishedturb = data[3];
+            // console.log(finishedturb);
+            // buildTable(dates, poudreturb, horsetoothturb, finishedturb);
+    });
+
+}
+
+// Use the data to put into a table
+function buildTable(dates, poudreturb, horsetoothturb, finishedturb) {
+    var table = d3.select("#data-table");
+    var tbody = table.select("tbody");
+    var trow;
+    for (var i = 0; i < 12; i++) {
+        trow = tbody.append("tr");
+        trow.append("td").text(dates[i]);
+        trow.append("td").text(poudreturb[i]);
+        trow.append("td").text(horsetoothturb[i]);
+        trow.append("td").text(finishedturb[i]);
+
+    }
+}
+
+// Plotly chart
+function buildPlot() {
+    queryUrl;
+    d3.json(queryUrl, function(data) {
+
+        // Data for the plot via the json response
+        var dates = data.date;
+        var poudreturb = data.poudre_turb_ntu;
+        var horsetoothturb = data.horsetooth_turb_ntu;
+        var finishedturb = data.finished_water_turb_ntu;
+
+        getWaterData();
+
+        var trace1 = {
+            type: "scatter",
+            mode: "lines",
+            x: dates,
+            y: finishedturb,
+            line: {
+                color: "#17BECF"
+            }
+        };
+
+        // Candlestick Trace
+        var trace2 = {
+            type: "candlestick",
+            x: dates,
+            poudre: poudreturb,
+            horsetooth: horsetoothturb
+        };
+
+        var data = [trace1, trace2];
+
+        var layout = {
+            title: 'Water Analysis',
+            xaxis: {
+                autorange: true,
+                type: "date",
+                title: "Dates"
+            },
+            yaxis: {
+                autorange: true,
+                type: "linear",
+                title: "Turbidity Results"
+            },
+            showlegend: true
+        };
+
+        Plotly.newPlot("plot-1", data, layout);
     });
 }
+
+buildPlot();
 
 // Set up first chart
 var svgWidth = 950;
@@ -39,25 +118,3 @@ var svg = d3
 // Transform the chart so the axis appear on the left(y-axis)/bottom(x-axis)
 var chartGroup = svg.append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
-
-// Query URL for the data 
-var queryUrl = `https://opendata.fcgov.com/resource/8n27-taq6.json?$where=datenum%3E=20190101&$$app_token=${appToken}`;
-// console.log(queryUrl)
-
-// Function to extract data and put into a visible table
-function getWaterData() {
-
-    d3.json(queryUrl).then(function(data) {
-        var dates = unpack(data.dataset.data, 1);
-        var poudreturb = unpack(data.dataset.data, 7);
-        var horsetoothturb = unpack(data.dataset.data, 11);
-        var finishedturb = unpack(data.dataset.data, 15);
-        buildTable(dates, poudreturb, horsetoothturb, finishedturb);
-    })
-}
-
-// Use the data to put into a table
-function buildTable(dates, poudreturb, horsetoothturb, finishedturb) {
-    var table = d3.select("#data-table");
-    var tbody = table.select("tbody")
-}
