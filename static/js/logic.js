@@ -55,3 +55,9 @@ function getWaterData() {
         buildTable(dates, poudreturb, horsetoothturb, finishedturb);
     })
 }
+
+// Use the data to put into a table
+function buildTable(dates, poudreturb, horsetoothturb, finishedturb) {
+    var table = d3.select("#data-table");
+    var tbody = table.select("tbody")
+}
