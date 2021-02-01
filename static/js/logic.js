@@ -9,30 +9,28 @@ function getWaterData() {
     queryUrl;
     d3.json(queryUrl, function(data) {
         console.log(data);
-        for (var i = 0; i < length; i++);
-            var water_data = data[i]; 
-                console.log(water_data);
-            // var dates = data[0];
-            // console.log(dates);
-            // var poudreturb = data[1];
+        for (var i = 0; i < data.length; i++) {
+        var water_dates = data[i].date; 
+            // console.log(water_dates);
+        var poudreturb = data[i].poudre_turb_ntu;
             // console.log(poudreturb);
-            // var horsetoothturb = data[2];
+        var horsetoothturb = data[i].horsetooth_turb_ntu;
             // console.log(horsetoothturb);
-            // var finishedturb = data[3];
+        var finishedturb = data[i].finished_water_turb_ntu;
             // console.log(finishedturb);
-            // buildTable(dates, poudreturb, horsetoothturb, finishedturb);
-    });
+        // buildTable(water_dates, poudreturb, horsetoothturb, finishedturb);
+    }});
 
 }
 
 // Use the data to put into a table
-function buildTable(dates, poudreturb, horsetoothturb, finishedturb) {
+function buildTable(water_dates, poudreturb, horsetoothturb, finishedturb) {
     var table = d3.select("#data-table");
     var tbody = table.select("tbody");
     var trow;
     for (var i = 0; i < 12; i++) {
         trow = tbody.append("tr");
-        trow.append("td").text(dates[i]);
+        trow.append("td").text(water_dates[i]);
         trow.append("td").text(poudreturb[i]);
         trow.append("td").text(horsetoothturb[i]);
         trow.append("td").text(finishedturb[i]);
