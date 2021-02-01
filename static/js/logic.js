@@ -1,5 +1,5 @@
 var appToken = app_token;
-
+var dates = [];
 // Query URL for the data 
 var queryUrl = `https://opendata.fcgov.com/resource/8n27-taq6.json?$where=datenum%3E=20190101&$$app_token=${appToken}`;
 console.log(queryUrl)
@@ -11,14 +11,14 @@ function getWaterData() {
         console.log(data);
         for (var i = 0; i < data.length; i++) {
         var water_dates = data[i].date; 
-            // console.log(water_dates);
+            console.log(water_dates);
         var poudreturb = data[i].poudre_turb_ntu;
-            // console.log(poudreturb);
+            console.log(poudreturb);
         var horsetoothturb = data[i].horsetooth_turb_ntu;
-            // console.log(horsetoothturb);
+            console.log(horsetoothturb);
         var finishedturb = data[i].finished_water_turb_ntu;
-            // console.log(finishedturb);
-        // buildTable(water_dates, poudreturb, horsetoothturb, finishedturb);
+            console.log(finishedturb);
+        buildTable(water_dates, poudreturb, horsetoothturb, finishedturb);
     }});
 
 }
@@ -42,9 +42,10 @@ function buildTable(water_dates, poudreturb, horsetoothturb, finishedturb) {
 function buildPlot() {
     queryUrl;
     d3.json(queryUrl, function(data) {
+        for (var i = 0; i < data.length; i++) {
 
         // Data for the plot via the json response
-        var dates = data.date;
+        var water_dates = data.date;
         var poudreturb = data.poudre_turb_ntu;
         var horsetoothturb = data.horsetooth_turb_ntu;
         var finishedturb = data.finished_water_turb_ntu;
@@ -54,7 +55,7 @@ function buildPlot() {
         var trace1 = {
             type: "scatter",
             mode: "lines",
-            x: dates,
+            x: water_dates,
             y: finishedturb,
             line: {
                 color: "#17BECF"
@@ -64,7 +65,7 @@ function buildPlot() {
         // Candlestick Trace
         var trace2 = {
             type: "candlestick",
-            x: dates,
+            x: water_dates,
             poudre: poudreturb,
             horsetooth: horsetoothturb
         };
@@ -87,7 +88,7 @@ function buildPlot() {
         };
 
         Plotly.newPlot("plot-1", data, layout);
-    });
+    }});
 }
 
 buildPlot();
