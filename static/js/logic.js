@@ -1,8 +1,5 @@
 var appToken = app_token;
-var dates = [];
-var all_poudre = [];
-var all_horsetooth = [];
-var all_finished = [];
+
 // Query URL for the data 
 var queryUrl = `https://opendata.fcgov.com/resource/8n27-taq6.json?$where=datenum%3E=20190101&$$app_token=${appToken}`;
 console.log(queryUrl)
@@ -10,44 +7,36 @@ console.log(queryUrl)
 // Function to extract data and put into a visible table
 function getWaterData() {
     queryUrl;
-    d3.json(queryUrl, function(data) {
+    response = d3.json(queryUrl, function(data) {
         console.log(data);
         for (var i = 0; i < data.length; i++) {
         var water_dates = data[i].date; 
-            // console.log(water_dates);
-            dates.push(water_dates);
-            console.log(dates);
+            console.log(water_dates);
         var poudreturb = data[i].poudre_turb_ntu;
-            // console.log(poudreturb);
-            all_poudre.push(poudreturb);
-            console.log(all_poudre);
+            console.log(poudreturb);
         var horsetoothturb = data[i].horsetooth_turb_ntu;
-            // console.log(horsetoothturb);
-            all_horsetooth.push(horsetoothturb);
-            console.log(all_horsetooth);
+            console.log(horsetoothturb);
         var finishedturb = data[i].finished_water_turb_ntu;
-            // console.log(finishedturb);
-            all_finished.push(finishedturb);
-            console.log(all_finished);
-        // buildTable(water_dates, poudreturb, horsetoothturb, finishedturb);
+            console.log(finishedturb);
+        buildTable(water_dates, poudreturb, horsetoothturb, finishedturb);
     }});
 
 }
 
 // Use the data to put into a table
-// function buildTable(water_dates, poudreturb, horsetoothturb, finishedturb) {
-//     var table = d3.select("#data-table");
-//     var tbody = table.select("tbody");
-//     var trow;
-//     for (var i = 0; i < 12; i++) {
-//         trow = tbody.append("tr");
-//         trow.append("td").text(water_dates[i]);
-//         trow.append("td").text(poudreturb[i]);
-//         trow.append("td").text(horsetoothturb[i]);
-//         trow.append("td").text(finishedturb[i]);
+function buildTable(water_dates, poudreturb, horsetoothturb, finishedturb) {
+    var table = d3.select("#data-table");
+    var tbody = table.select("tbody");
+    var trow;
+    for (var i = 0; i < 12; i++) {
+        trow = tbody.append("tr");
+        trow.append("td").text(water_dates);
+        trow.append("td").text(poudreturb);
+        trow.append("td").text(horsetoothturb);
+        trow.append("td").text(finishedturb);
 
-//     }
-// }
+    }
+}
 
 // Plotly chart
 function buildPlot() {
@@ -104,7 +93,7 @@ function buildPlot() {
 
 buildPlot();
 
-// Set up first chart
+// Set up chart with D3
 var svgWidth = 950;
 var svgHeight = 500;
 
