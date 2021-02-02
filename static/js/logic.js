@@ -7,33 +7,48 @@ console.log(queryUrl)
 // Function to extract data and put into a visible table
 function getWaterData() {
     queryUrl;
+    // Variables for empty lists
+var all_dates = [];
+var all_poudre = [];
+var all_horsetooth = [];
+var all_finished = [];
     response = d3.json(queryUrl, function(data) {
         console.log(data);
         for (var i = 0; i < data.length; i++) {
-        var water_dates = data[i].date; 
-            console.log(water_dates);
-        var poudreturb = data[i].poudre_turb_ntu;
-            console.log(poudreturb);
-        var horsetoothturb = data[i].horsetooth_turb_ntu;
-            console.log(horsetoothturb);
-        var finishedturb = data[i].finished_water_turb_ntu;
-            console.log(finishedturb);
-        buildTable(water_dates, poudreturb, horsetoothturb, finishedturb);
-    }});
+
+            // Code to extract data and push into empty arrays
+            var water_dates = data[i].date; 
+            all_dates.push(water_dates);
+                
+            var poudreturb = data[i].poudre_turb_ntu;
+            all_poudre.push(poudreturb);
+
+            var horsetoothturb = data[i].horsetooth_turb_ntu;
+            all_horsetooth.push(horsetoothturb);
+
+            var finishedturb = data[i].finished_water_turb_ntu;
+            all_finished.push(finishedturb);
+    }
+    console.log(all_dates);
+    console.log(all_poudre);
+    console.log(all_horsetooth);
+    console.log(all_finished);
+});
 
 }
+getWaterData();
 
 // Use the data to put into a table
-function buildTable(water_dates, poudreturb, horsetoothturb, finishedturb) {
+function buildTable() {
     var table = d3.select("#data-table");
     var tbody = table.select("tbody");
     var trow;
-    for (var i = 0; i < 12; i++) {
+    for (var i = 0; i < 1; i++) {
         trow = tbody.append("tr");
-        trow.append("td").text(water_dates);
-        trow.append("td").text(poudreturb);
-        trow.append("td").text(horsetoothturb);
-        trow.append("td").text(finishedturb);
+        trow.append("td").text(all_finished);
+        trow.append("td").text(all_poudre);
+        trow.append("td").text(all_horsetooth);
+        trow.append("td").text(all_finished);
 
     }
 }
@@ -92,28 +107,3 @@ function buildPlot() {
 }
 
 buildPlot();
-
-// Set up chart with D3
-var svgWidth = 950;
-var svgHeight = 500;
-
-var margin = {
-    top: 20,
-    bottom: 50,
-    left: 40,
-    right: 40
-};
-
-var width = svgWidth - margin.left - margin.right;
-var height = svgHeight - margin.top - margin.bottom;
-
-// SVG wrapper to append the chart
-var svg = d3
-    .select("body")
-    .append("svg")
-    .attr("width", svgWidth)
-    .attr("height", svgHeight);
-
-// Transform the chart so the axis appear on the left(y-axis)/bottom(x-axis)
-var chartGroup = svg.append("g")
-    .attr("transform", `translate(${margin.left}, ${margin.top})`);
