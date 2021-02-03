@@ -34,6 +34,46 @@ function getWaterData() {
     console.log(all_horsetooth);
     console.log(all_finished);
 
+    // Trace created to plot a chart
+    var trace1 = {
+        x: all_dates,
+        y: all_finished,
+        name: "Finished Turbidity",
+        type: "scatter",
+        mode: "markers"
+    }
+
+    var trace2 = {
+        x: all_dates,
+        y: all_poudre,
+        name: "Poudre Raw Turbidity",
+        type: "scatter",
+        mode: "markers"
+    }
+
+    var trace3 = {
+        x: all_dates,
+        y: all_horsetooth,
+        name: "Horsetooth Raw Turbidity",
+        type: "scatter",
+        mode: "markers"
+    }
+
+    var layout = {
+        title: "Fort Collins Water Turbidity",
+        width: 1300,
+        height: 500,
+        margin: {
+            l: 20,
+            b: 92,
+            t: 50
+        }
+    }
+
+    var data = [trace1, trace2, trace3];
+    Plotly.newPlot("plot-1", data, layout);
+
+
     // Enter dates into table
     d3.select("tbody")
         .selectAll("tr")
