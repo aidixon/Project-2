@@ -28,13 +28,13 @@ function getWaterData() {
             all_dates.push(water_dates);
                 
             var poudreturb = data[i].poudre_turb_ntu;
-            all_poudre.push(poudreturb);
+            all_poudre.push(+poudreturb);
 
             var horsetoothturb = data[i].horsetooth_turb_ntu;
-            all_horsetooth.push(horsetoothturb);
+            all_horsetooth.push(+horsetoothturb);
 
             var finishedturb = data[i].finished_water_turb_ntu;
-            all_finished.push(finishedturb);
+            all_finished.push(+finishedturb);
     }
     console.log(all_dates);
     console.log(all_poudre);
@@ -81,6 +81,65 @@ function getWaterData() {
     var data = [trace1, trace2, trace3];
     Plotly.newPlot("plot-1", data, layout);
 
+
+    // Second chart 
+    Highcharts.chart('container', {
+        chart: {
+            type: 'area',
+            inverted: true
+        },
+        title: {
+            text: 'Average fruit consumption during one week'
+        },
+        accessibility: {
+            keyboardNavigation: {
+                seriesNavigation: {
+                    mode: 'serialize'
+                }
+            }
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'top',
+            x: -150,
+            y: 100,
+            floating: true,
+            borderWidth: 1,
+            backgroundColor:
+                Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF'
+        },
+        xAxis: {
+            categories: [
+                'Monday',
+                'Tuesday',
+                'Wednesday',
+                'Thursday',
+                'Friday',
+                'Saturday',
+                'Sunday'
+            ]
+        },
+        yAxis: {
+            title: {
+                text: 'Number of units'
+            },
+            allowDecimals: false,
+            min: 0
+        },
+        plotOptions: {
+            area: {
+                fillOpacity: 0.5
+            }
+        },
+        series: [{
+            name: 'Finished Water Turbidity',
+            data: [all_finished]
+        }, {
+            name: 'Jane',
+            data: [1, 3, 4, 3, 3, 5, 4]
+        }]
+    });
 
     // Enter dates into table
     d3.select("tbody")
