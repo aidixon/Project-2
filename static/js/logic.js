@@ -12,8 +12,15 @@ function getWaterData() {
     var all_poudre = [];
     var all_horsetooth = [];
     var all_finished = [];
+    var water_data = [];
+
     response = d3.json(queryUrl, function(data) {
         console.log(data);
+
+        // The data is callable 
+        water_data.push(data);
+
+        // For loop to loop through the data
         for (var i = 0; i < data.length; i++) {
 
             // Code to extract data and push into empty arrays
@@ -33,6 +40,7 @@ function getWaterData() {
     console.log(all_poudre);
     console.log(all_horsetooth);
     console.log(all_finished);
+    console.log(water_data);
 
     // Trace created to plot a chart
     var trace1 = {
