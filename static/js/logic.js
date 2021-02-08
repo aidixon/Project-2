@@ -13,7 +13,6 @@ function getWaterData() {
     var all_horsetooth = [];
     var all_finished = [];
     var water_data = [];
-    var Jan2019 = [];
 
     response = d3.json(queryUrl, function(data) {
         console.log(data);
@@ -141,7 +140,7 @@ function getWaterData() {
     var Jan2019P = [0.29,0.27,0.27,0.31,0.32,0.3,0.32,0.39,0.47,0.41,0.41,0.41,0.41,0.41,0.4,0.42,
         0.4,0.43,.41,0.41,0.41,0.41,0.4,0.41,0.4,0.41,0.4,0.66,0.56,0.39,0.38,];
 
-    // Third chart
+    // Third chart using Highcharts.js
     Highcharts.chart('container', {
         chart: {
             type: 'packedbubble',
