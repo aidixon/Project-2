@@ -13,13 +13,14 @@ function getWaterData() {
     var all_horsetooth = [];
     var all_finished = [];
     var water_data = [];
+    var Jan2019 = [];
 
     response = d3.json(queryUrl, function(data) {
         console.log(data);
 
         // The data is callable 
         water_data.push(data);
-
+        
         // For loop to loop through the data
         for (var i = 0; i < data.length; i++) {
 
@@ -35,13 +36,17 @@ function getWaterData() {
 
             var finishedturb = data[i].finished_water_turb_ntu;
             all_finished.push(+finishedturb);
+
     }
-    console.log(all_dates);
+
+    // console.log(all_dates);
     console.log(all_poudre);
     console.log(all_horsetooth);
     console.log(all_finished);
     console.log(water_data);
+    console.log(all_dates);
 
+  
     // Trace created to plot a chart
     var trace1 = {
         x: all_dates,
@@ -83,82 +88,29 @@ function getWaterData() {
 
 
     // Second chart 
-    Highcharts.chart('container', {
-        chart: {
-            type: 'area',
-            inverted: true
-        },
-        title: {
-            text: 'Average fruit consumption during one week'
-        },
-        accessibility: {
-            keyboardNavigation: {
-                seriesNavigation: {
-                    mode: 'serialize'
-                }
-            }
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'top',
-            x: -150,
-            y: 100,
-            floating: true,
-            borderWidth: 1,
-            backgroundColor:
-                Highcharts.defaultOptions.legend.backgroundColor || '#FFFFFF'
-        },
-        xAxis: {
-            categories: [
-                'Monday',
-                'Tuesday',
-                'Wednesday',
-                'Thursday',
-                'Friday',
-                'Saturday',
-                'Sunday'
-            ]
-        },
-        yAxis: {
-            title: {
-                text: 'Number of units'
-            },
-            allowDecimals: false,
-            min: 0
-        },
-        plotOptions: {
-            area: {
-                fillOpacity: 0.5
-            }
-        },
-        series: [{
-            name: 'Finished Water Turbidity',
-            data: [all_finished]
-        }, {
-            name: 'Jane',
-            data: [1, 3, 4, 3, 3, 5, 4]
-        }]
-    });
+    var trace4 = {
+        type: "scatter",
+        mode: "lines",
+        x: all_dates,
+        y: all_finished,
+        line: {
+            color: "#17BECF"
+        }
+    }
 
-    // Enter dates into table
-    d3.select("tbody")
-        .selectAll("tr")
-        .data(all_dates)
-        .enter()
-        .append("tr")
-        .html(function(d) {
-            return `<td>${d}</td>`;
-        })
-    
-    // Enter poudre data into table
-    // d3.select("tbody")
-    //     .selectAll("tr")
-    //     .data(all_poudre)
-    //     .enter()
-    //     .append("tr")
-    //     .html(function(d) {
-    //         return `<td>${d}</td>`;
-    //     });
+    var layout2 = {
+        title: "Finished Water Closer Analysis",
+        width: 1300,
+        height: 500,
+        margin: {
+            l: 40,
+            b: 95,
+            t: 60,
+        }
+    }
+    var data = [trace4]
+
+    Plotly.newPlot("plot-2", data, layout2)
+
 })};
 getWaterData();
