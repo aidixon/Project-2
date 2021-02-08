@@ -205,7 +205,7 @@ function getWaterData() {
             }
         },
         series: [{
-            name: 'January 2019 Finished Water',
+            name: 'January 2019 Finished Water Turbidity',
             data: [{
                 name: "01-Jan-2019",
                 value: Jan2019F[0]
@@ -323,240 +323,946 @@ function getWaterData() {
             }
             ]
         }, {
-            name: 'January 2020 Finished Water',
+            name: 'January 2020 Finished Water Turbidity',
             data: [{
-                name: "01-Jan-2019",
-                value: Jan2019F[0]
+                name: "01-Jan-2020",
+                value: Jan2020F[0]
             }, {
-                name: "02-Jan-2019",
-                value: Jan2019F[1]
+                name: "02-Jan-2020",
+                value: Jan2020F[1]
             },
             {
-                name: "03-Jan-2019",
-                value: Jan2019F[2]
+                name: "03-Jan-2020",
+                value: Jan2020F[2]
             },
             {
-                name: "04-Jan-2019",
-                value: Jan2019F[3]
+                name: "04-Jan-2020",
+                value: Jan2020F[3]
             }, {
-                name: "05-Jan-2019",
-                value: Jan2019F[4]
+                name: "05-Jan-2020",
+                value: Jan2020F[4]
             },
             {
-                name: "06-Jan-2019",
-                value: Jan2019F[5]
+                name: "06-Jan-2020",
+                value: Jan2020F[5]
             },
             {
-                name: "07-Jan-2019",
-                value: Jan2019F[6]
+                name: "07-Jan-2020",
+                value: Jan2020F[6]
             }, {
-                name: "08-Jan-2019",
-                value: Jan2019F[7]
+                name: "08-Jan-2020",
+                value: Jan2020F[7]
             },
             {
-                name: "09-Jan-2019",
-                value: Jan2019F[8]
+                name: "09-Jan-2020",
+                value: Jan2020F[8]
             },
             {
-                name: "10-Jan-2019",
-                value: Jan2019F[9]
+                name: "10-Jan-2020",
+                value: Jan2020F[9]
             }, {
-                name: "11-Jan-2019",
-                value: Jan2019F[10]
+                name: "11-Jan-2020",
+                value: Jan2020F[10]
             },
             {
-                name: "12-Jan-2019",
-                value: Jan2019F[11]
+                name: "12-Jan-2020",
+                value: Jan2020F[11]
             },
             {
-                name: "13-Jan-2019",
-                value: Jan2019F[12]
+                name: "13-Jan-2020",
+                value: Jan2020F[12]
             }, {
-                name: "14-Jan-2019",
-                value: Jan2019F[13]
+                name: "14-Jan-2020",
+                value: Jan2020F[13]
             },
             {
-                name: "15-Jan-2019",
-                value: Jan2019F[14]
+                name: "15-Jan-2020",
+                value: Jan2020F[14]
             },
             {
-                name: "16-Jan-2019",
-                value: Jan2019F[15]
+                name: "16-Jan-2020",
+                value: Jan2020F[15]
             }, {
-                name: "17-Jan-2019",
-                value: Jan2019F[16]
+                name: "17-Jan-2020",
+                value: Jan2020F[16]
             },
             {
-                name: "18-Jan-2019",
-                value: Jan2019F[17]
+                name: "18-Jan-2020",
+                value: Jan2020F[17]
             },
             {
-                name: "19-Jan-2019",
-                value: Jan2019F[18]
+                name: "19-Jan-2020",
+                value: Jan2020F[18]
             }, {
-                name: "20-Jan-2019",
-                value: Jan2019F[19]
+                name: "20-Jan-2020",
+                value: Jan2020F[19]
             },
             {
-                name: "21-Jan-2019",
-                value: Jan2019F[20]
+                name: "21-Jan-2020",
+                value: Jan2020F[20]
             },
             {
-                name: "22-Jan-2019",
-                value: Jan2019F[21]
+                name: "22-Jan-2020",
+                value: Jan2020F[21]
             }, {
-                name: "23-Jan-2019",
-                value: Jan2019F[22]
+                name: "23-Jan-2020",
+                value: Jan2020F[22]
             },
             {
-                name: "24-Jan-2019",
-                value: Jan2019F[23]
+                name: "24-Jan-2020",
+                value: Jan2020F[23]
             },
             {
-                name: "25-Jan-2019",
-                value: Jan2019F[24]
+                name: "25-Jan-2020",
+                value: Jan2020F[24]
             }, {
-                name: "26-Jan-2019",
-                value: Jan2019F[25]
+                name: "26-Jan-2020",
+                value: Jan2020F[25]
             },
             {
-                name: "27-Jan-2019",
-                value: Jan2019F[26]
+                name: "27-Jan-2020",
+                value: Jan2020F[26]
             },
             {
-                name: "28-Jan-2019",
-                value: Jan2019F[27]
+                name: "28-Jan-2020",
+                value: Jan2020F[27]
             },
             {
-                name: "29-Jan-2019",
-                value: Jan2019F[28]
+                name: "29-Jan-2020",
+                value: Jan2020F[28]
             },
             {
-                name: "30-Jan-2019",
-                value: Jan2019F[29]
+                name: "30-Jan-2020",
+                value: Jan2020F[29]
             },
             {
-                name: "31-Jan-2019",
-                value: Jan2019F[30]
+                name: "31-Jan-2020",
+                value: Jan2020F[30]
             }
             ]
         }, {
-            name: 'January 2021 Finished Water',
+            name: 'January 2021 Finished Water Turbidity',
             data: [{
-                name: "01-Jan-2019",
-                value: Jan2019F[0]
+                name: "01-Jan-2021",
+                value: Jan2021F[0]
             }, {
-                name: "02-Jan-2019",
-                value: Jan2019F[1]
+                name: "02-Jan-2021",
+                value: Jan2021F[1]
             },
             {
-                name: "03-Jan-2019",
-                value: Jan2019F[2]
+                name: "03-Jan-2021",
+                value: Jan2021F[2]
             },
             {
-                name: "04-Jan-2019",
-                value: Jan2019F[3]
+                name: "04-Jan-2021",
+                value: Jan2021F[3]
             }, {
-                name: "05-Jan-2019",
-                value: Jan2019F[4]
+                name: "05-Jan-2021",
+                value: Jan2021F[4]
             },
             {
-                name: "06-Jan-2019",
-                value: Jan2019F[5]
+                name: "06-Jan-2021",
+                value: Jan2021F[5]
             },
             {
-                name: "07-Jan-2019",
-                value: Jan2019F[6]
+                name: "07-Jan-2021",
+                value: Jan2021F[6]
             }, {
-                name: "08-Jan-2019",
-                value: Jan2019F[7]
+                name: "08-Jan-2021",
+                value: Jan2021F[7]
             },
             {
-                name: "09-Jan-2019",
-                value: Jan2019F[8]
+                name: "09-Jan-2021",
+                value: Jan2021F[8]
             },
             {
-                name: "10-Jan-2019",
-                value: Jan2019F[9]
+                name: "10-Jan-2021",
+                value: Jan2021F[9]
             }, {
-                name: "11-Jan-2019",
-                value: Jan2019F[10]
+                name: "11-Jan-2021",
+                value: Jan2021F[10]
             },
             {
-                name: "12-Jan-2019",
-                value: Jan2019F[11]
+                name: "12-Jan-2021",
+                value: Jan2021F[11]
             },
             {
-                name: "13-Jan-2019",
-                value: Jan2019F[12]
+                name: "13-Jan-2021",
+                value: Jan2021F[12]
             }, {
-                name: "14-Jan-2019",
-                value: Jan2019F[13]
+                name: "14-Jan-2021",
+                value: Jan2021F[13]
             },
             {
-                name: "15-Jan-2019",
-                value: Jan2019F[14]
+                name: "15-Jan-2021",
+                value: Jan2021F[14]
             },
             {
-                name: "16-Jan-2019",
-                value: Jan2019F[15]
+                name: "16-Jan-2021",
+                value: Jan2021F[15]
             }, {
-                name: "17-Jan-2019",
-                value: Jan2019F[16]
+                name: "17-Jan-2021",
+                value: Jan2021F[16]
             },
             {
-                name: "18-Jan-2019",
-                value: Jan2019F[17]
+                name: "18-Jan-2021",
+                value: Jan2021F[17]
             },
             {
-                name: "19-Jan-2019",
-                value: Jan2019F[18]
+                name: "19-Jan-2021",
+                value: Jan2021F[18]
             }, {
-                name: "20-Jan-2019",
-                value: Jan2019F[19]
+                name: "20-Jan-2021",
+                value: Jan2021F[19]
             },
             {
-                name: "21-Jan-2019",
-                value: Jan2019F[20]
+                name: "21-Jan-2021",
+                value: Jan2021F[20]
             },
             {
-                name: "22-Jan-2019",
-                value: Jan2019F[21]
+                name: "22-Jan-2021",
+                value: Jan2021F[21]
             }, {
-                name: "23-Jan-2019",
-                value: Jan2019F[22]
+                name: "23-Jan-2021",
+                value: Jan2021F[22]
             },
             {
-                name: "24-Jan-2019",
-                value: Jan2019F[23]
+                name: "24-Jan-2021",
+                value: Jan2021F[23]
             },
             {
-                name: "25-Jan-2019",
-                value: Jan2019F[24]
+                name: "25-Jan-2021",
+                value: Jan2021F[24]
             }, {
-                name: "26-Jan-2019",
-                value: Jan2019F[25]
+                name: "26-Jan-2021",
+                value: Jan2021F[25]
             },
             {
-                name: "27-Jan-2019",
-                value: Jan2019F[26]
+                name: "27-Jan-2021",
+                value: Jan2021F[26]
             },
             {
-                name: "28-Jan-2019",
-                value: Jan2019F[27]
+                name: "28-Jan-2021",
+                value: Jan2021F[27]
             },
             {
-                name: "29-Jan-2019",
-                value: Jan2019F[28]
+                name: "29-Jan-2021",
+                value: Jan2021F[28]
             },
             {
-                name: "30-Jan-2019",
-                value: Jan2019F[29]
+                name: "30-Jan-2021",
+                value: Jan2021F[29]
             },
             {
-                name: "31-Jan-2019",
-                value: Jan2019F[30]
+                name: "31-Jan-2021",
+                value: Jan2021F[30]
             }]
+            }, {
+                name: 'January 2019 Horsetooth Raw Water Turbidity',
+                data: [{
+                    name: "01-Jan-2019",
+                    value: Jan2019H[0]
+                }, {
+                    name: "02-Jan-2019",
+                    value: Jan2019H[1]
+                },
+                {
+                    name: "03-Jan-2019",
+                    value: Jan2019H[2]
+                },
+                {
+                    name: "04-Jan-2019",
+                    value: Jan2019H[3]
+                }, {
+                    name: "05-Jan-2019",
+                    value: Jan2019H[4]
+                },
+                {
+                    name: "06-Jan-2019",
+                    value: Jan2019H[5]
+                },
+                {
+                    name: "07-Jan-2019",
+                    value: Jan2019H[6]
+                }, {
+                    name: "08-Jan-2019",
+                    value: Jan2019H[7]
+                },
+                {
+                    name: "09-Jan-2019",
+                    value: Jan2019H[8]
+                },
+                {
+                    name: "10-Jan-2019",
+                    value: Jan2019H[9]
+                }, {
+                    name: "11-Jan-2019",
+                    value: Jan2019H[10]
+                },
+                {
+                    name: "12-Jan-2019",
+                    value: Jan2019H[11]
+                },
+                {
+                    name: "13-Jan-2019",
+                    value: Jan2019H[12]
+                }, {
+                    name: "14-Jan-2019",
+                    value: Jan2019H[13]
+                },
+                {
+                    name: "15-Jan-2019",
+                    value: Jan2019H[14]
+                },
+                {
+                    name: "16-Jan-2019",
+                    value: Jan2019H[15]
+                }, {
+                    name: "17-Jan-2019",
+                    value: Jan2019H[16]
+                },
+                {
+                    name: "18-Jan-2019",
+                    value: Jan2019H[17]
+                },
+                {
+                    name: "19-Jan-2019",
+                    value: Jan2019H[18]
+                }, {
+                    name: "20-Jan-2019",
+                    value: Jan2019H[19]
+                },
+                {
+                    name: "21-Jan-2019",
+                    value: Jan2019H[20]
+                },
+                {
+                    name: "22-Jan-2019",
+                    value: Jan2019H[21]
+                }, {
+                    name: "23-Jan-2019",
+                    value: Jan2019H[22]
+                },
+                {
+                    name: "24-Jan-2019",
+                    value: Jan2019H[23]
+                },
+                {
+                    name: "25-Jan-2019",
+                    value: Jan2019H[24]
+                }, {
+                    name: "26-Jan-2019",
+                    value: Jan2019H[25]
+                },
+                {
+                    name: "27-Jan-2019",
+                    value: Jan2019H[26]
+                },
+                {
+                    name: "28-Jan-2019",
+                    value: Jan2019H[27]
+                },
+                {
+                    name: "29-Jan-2019",
+                    value: Jan2019H[28]
+                },
+                {
+                    name: "30-Jan-2019",
+                    value: Jan2019H[29]
+                },
+                {
+                    name: "31-Jan-2019",
+                    value: Jan2019H[30]
+                }
+                ]
+            }, {
+                name: 'January 2020 Horsetooth Raw Water Turbidity',
+                data: [{
+                    name: "01-Jan-2020",
+                    value: Jan2020H[0]
+                }, {
+                    name: "02-Jan-2020",
+                    value: Jan2020H[1]
+                },
+                {
+                    name: "03-Jan-2020",
+                    value: Jan2020H[2]
+                },
+                {
+                    name: "04-Jan-2020",
+                    value: Jan2020H[3]
+                }, {
+                    name: "05-Jan-2020",
+                    value: Jan2020H[4]
+                },
+                {
+                    name: "06-Jan-2020",
+                    value: Jan2020H[5]
+                },
+                {
+                    name: "07-Jan-2020",
+                    value: Jan2020H[6]
+                }, {
+                    name: "08-Jan-2020",
+                    value: Jan2020H[7]
+                },
+                {
+                    name: "09-Jan-2020",
+                    value: Jan2020H[8]
+                },
+                {
+                    name: "10-Jan-2020",
+                    value: Jan2020H[9]
+                }, {
+                    name: "11-Jan-2020",
+                    value: Jan2020H[10]
+                },
+                {
+                    name: "12-Jan-2020",
+                    value: Jan2020H[11]
+                },
+                {
+                    name: "13-Jan-2020",
+                    value: Jan2020H[12]
+                }, {
+                    name: "14-Jan-2020",
+                    value: Jan2020H[13]
+                },
+                {
+                    name: "15-Jan-2020",
+                    value: Jan2020H[14]
+                },
+                {
+                    name: "16-Jan-2020",
+                    value: Jan2020H[15]
+                }, {
+                    name: "17-Jan-2020",
+                    value: Jan2020H[16]
+                },
+                {
+                    name: "18-Jan-2020",
+                    value: Jan2020H[17]
+                },
+                {
+                    name: "19-Jan-2020",
+                    value: Jan2020H[18]
+                }, {
+                    name: "20-Jan-2020",
+                    value: Jan2020H[19]
+                },
+                {
+                    name: "21-Jan-2020",
+                    value: Jan2020H[20]
+                },
+                {
+                    name: "22-Jan-2020",
+                    value: Jan2020H[21]
+                }, {
+                    name: "23-Jan-2020",
+                    value: Jan2020H[22]
+                },
+                {
+                    name: "24-Jan-2020",
+                    value: Jan2020H[23]
+                },
+                {
+                    name: "25-Jan-2020",
+                    value: Jan2020H[24]
+                }, {
+                    name: "26-Jan-2020",
+                    value: Jan2020H[25]
+                },
+                {
+                    name: "27-Jan-2020",
+                    value: Jan2020H[26]
+                },
+                {
+                    name: "28-Jan-2020",
+                    value: Jan2020H[27]
+                },
+                {
+                    name: "29-Jan-2020",
+                    value: Jan2020H[28]
+                },
+                {
+                    name: "30-Jan-2020",
+                    value: Jan2020H[29]
+                },
+                {
+                    name: "31-Jan-2020",
+                    value: Jan2020H[30]
+                }
+                ]
+            }, {
+                name: 'January 2021 Horsetooth Raw Water Turbidity',
+                data: [{
+                    name: "01-Jan-2021",
+                    value: Jan2021H[0]
+                }, {
+                    name: "02-Jan-2021",
+                    value: Jan2021H[1]
+                },
+                {
+                    name: "03-Jan-2021",
+                    value: Jan2021H[2]
+                },
+                {
+                    name: "04-Jan-2021",
+                    value: Jan2021H[3]
+                }, {
+                    name: "05-Jan-2021",
+                    value: Jan2021H[4]
+                },
+                {
+                    name: "06-Jan-2021",
+                    value: Jan2021H[5]
+                },
+                {
+                    name: "07-Jan-2021",
+                    value: Jan2021H[6]
+                }, {
+                    name: "08-Jan-2021",
+                    value: Jan2021H[7]
+                },
+                {
+                    name: "09-Jan-2021",
+                    value: Jan2021H[8]
+                },
+                {
+                    name: "10-Jan-2021",
+                    value: Jan2021H[9]
+                }, {
+                    name: "11-Jan-2021",
+                    value: Jan2021H[10]
+                },
+                {
+                    name: "12-Jan-2021",
+                    value: Jan2021H[11]
+                },
+                {
+                    name: "13-Jan-2021",
+                    value: Jan2021H[12]
+                }, {
+                    name: "14-Jan-2021",
+                    value: Jan2021H[13]
+                },
+                {
+                    name: "15-Jan-2021",
+                    value: Jan2021H[14]
+                },
+                {
+                    name: "16-Jan-2021",
+                    value: Jan2021H[15]
+                }, {
+                    name: "17-Jan-2021",
+                    value: Jan2021H[16]
+                },
+                {
+                    name: "18-Jan-2021",
+                    value: Jan2021H[17]
+                },
+                {
+                    name: "19-Jan-2021",
+                    value: Jan2021H[18]
+                }, {
+                    name: "20-Jan-2021",
+                    value: Jan2021H[19]
+                },
+                {
+                    name: "21-Jan-2021",
+                    value: Jan2021H[20]
+                },
+                {
+                    name: "22-Jan-2021",
+                    value: Jan2021H[21]
+                }, {
+                    name: "23-Jan-2021",
+                    value: Jan2021H[22]
+                },
+                {
+                    name: "24-Jan-2021",
+                    value: Jan2021H[23]
+                },
+                {
+                    name: "25-Jan-2021",
+                    value: Jan2021H[24]
+                }, {
+                    name: "26-Jan-2021",
+                    value: Jan2021H[25]
+                },
+                {
+                    name: "27-Jan-2021",
+                    value: Jan2021H[26]
+                },
+                {
+                    name: "28-Jan-2021",
+                    value: Jan2021H[27]
+                },
+                {
+                    name: "29-Jan-2021",
+                    value: Jan2021H[28]
+                },
+                {
+                    name: "30-Jan-2021",
+                    value: Jan2021H[29]
+                },
+                {
+                    name: "31-Jan-2021",
+                    value: Jan2021H[30]
+                }]            
+                }, {
+                    name: 'January 2019 Poudre Raw Water Turbidity',
+                    data: [{
+                        name: "01-Jan-2019",
+                        value: Jan2019P[0]
+                    }, {
+                        name: "02-Jan-2019",
+                        value: Jan2019P[1]
+                    },
+                    {
+                        name: "03-Jan-2019",
+                        value: Jan2019P[2]
+                    },
+                    {
+                        name: "04-Jan-2019",
+                        value: Jan2019P[3]
+                    }, {
+                        name: "05-Jan-2019",
+                        value: Jan2019P[4]
+                    },
+                    {
+                        name: "06-Jan-2019",
+                        value: Jan2019P[5]
+                    },
+                    {
+                        name: "07-Jan-2019",
+                        value: Jan2019P[6]
+                    }, {
+                        name: "08-Jan-2019",
+                        value: Jan2019P[7]
+                    },
+                    {
+                        name: "09-Jan-2019",
+                        value: Jan2019P[8]
+                    },
+                    {
+                        name: "10-Jan-2019",
+                        value: Jan2019P[9]
+                    }, {
+                        name: "11-Jan-2019",
+                        value: Jan2019P[10]
+                    },
+                    {
+                        name: "12-Jan-2019",
+                        value: Jan2019P[11]
+                    },
+                    {
+                        name: "13-Jan-2019",
+                        value: Jan2019P[12]
+                    }, {
+                        name: "14-Jan-2019",
+                        value: Jan2019P[13]
+                    },
+                    {
+                        name: "15-Jan-2019",
+                        value: Jan2019P[14]
+                    },
+                    {
+                        name: "16-Jan-2019",
+                        value: Jan2019P[15]
+                    }, {
+                        name: "17-Jan-2019",
+                        value: Jan2019P[16]
+                    },
+                    {
+                        name: "18-Jan-2019",
+                        value: Jan2019P[17]
+                    },
+                    {
+                        name: "19-Jan-2019",
+                        value: Jan2019P[18]
+                    }, {
+                        name: "20-Jan-2019",
+                        value: Jan2019P[19]
+                    },
+                    {
+                        name: "21-Jan-2019",
+                        value: Jan2019P[20]
+                    },
+                    {
+                        name: "22-Jan-2019",
+                        value: Jan2019P[21]
+                    }, {
+                        name: "23-Jan-2019",
+                        value: Jan2019P[22]
+                    },
+                    {
+                        name: "24-Jan-2019",
+                        value: Jan2019P[23]
+                    },
+                    {
+                        name: "25-Jan-2019",
+                        value: Jan2019P[24]
+                    }, {
+                        name: "26-Jan-2019",
+                        value: Jan2019P[25]
+                    },
+                    {
+                        name: "27-Jan-2019",
+                        value: Jan2019P[26]
+                    },
+                    {
+                        name: "28-Jan-2019",
+                        value: Jan2019P[27]
+                    },
+                    {
+                        name: "29-Jan-2019",
+                        value: Jan2019P[28]
+                    },
+                    {
+                        name: "30-Jan-2019",
+                        value: Jan2019P[29]
+                    },
+                    {
+                        name: "31-Jan-2019",
+                        value: Jan2019P[30]
+                    }
+                    ]
+                }, {
+                    name: 'January 2020 Poudre Raw Water Turbidity',
+                    data: [{
+                        name: "01-Jan-2020",
+                        value: Jan2020P[0]
+                    }, {
+                        name: "02-Jan-2020",
+                        value: Jan2020P[1]
+                    },
+                    {
+                        name: "03-Jan-2020",
+                        value: Jan2020P[2]
+                    },
+                    {
+                        name: "04-Jan-2020",
+                        value: Jan2020P[3]
+                    }, {
+                        name: "05-Jan-2020",
+                        value: Jan2020P[4]
+                    },
+                    {
+                        name: "06-Jan-2020",
+                        value: Jan2020P[5]
+                    },
+                    {
+                        name: "07-Jan-2020",
+                        value: Jan2020P[6]
+                    }, {
+                        name: "08-Jan-2020",
+                        value: Jan2020P[7]
+                    },
+                    {
+                        name: "09-Jan-2020",
+                        value: Jan2020P[8]
+                    },
+                    {
+                        name: "10-Jan-2020",
+                        value: Jan2020P[9]
+                    }, {
+                        name: "11-Jan-2020",
+                        value: Jan2020P[10]
+                    },
+                    {
+                        name: "12-Jan-2020",
+                        value: Jan2020P[11]
+                    },
+                    {
+                        name: "13-Jan-2020",
+                        value: Jan2020P[12]
+                    }, {
+                        name: "14-Jan-2020",
+                        value: Jan2020P[13]
+                    },
+                    {
+                        name: "15-Jan-2020",
+                        value: Jan2020P[14]
+                    },
+                    {
+                        name: "16-Jan-2020",
+                        value: Jan2020P[15]
+                    }, {
+                        name: "17-Jan-2020",
+                        value: Jan2020P[16]
+                    },
+                    {
+                        name: "18-Jan-2020",
+                        value: Jan2020P[17]
+                    },
+                    {
+                        name: "19-Jan-2020",
+                        value: Jan2020P[18]
+                    }, {
+                        name: "20-Jan-2020",
+                        value: Jan2020P[19]
+                    },
+                    {
+                        name: "21-Jan-2020",
+                        value: Jan2020P[20]
+                    },
+                    {
+                        name: "22-Jan-2020",
+                        value: Jan2020P[21]
+                    }, {
+                        name: "23-Jan-2020",
+                        value: Jan2020P[22]
+                    },
+                    {
+                        name: "24-Jan-2020",
+                        value: Jan2020P[23]
+                    },
+                    {
+                        name: "25-Jan-2020",
+                        value: Jan2020P[24]
+                    }, {
+                        name: "26-Jan-2020",
+                        value: Jan2020P[25]
+                    },
+                    {
+                        name: "27-Jan-2020",
+                        value: Jan2020P[26]
+                    },
+                    {
+                        name: "28-Jan-2020",
+                        value: Jan2020P[27]
+                    },
+                    {
+                        name: "29-Jan-2020",
+                        value: Jan2020P[28]
+                    },
+                    {
+                        name: "30-Jan-2020",
+                        value: Jan2020P[29]
+                    },
+                    {
+                        name: "31-Jan-2020",
+                        value: Jan2020P[30]
+                    }
+                    ]
+                }, {
+                    name: 'January 2021 Poudre Raw Water Turbidity',
+                    data: [{
+                        name: "01-Jan-2021",
+                        value: Jan2021P[0]
+                    }, {
+                        name: "02-Jan-2021",
+                        value: Jan2021P[1]
+                    },
+                    {
+                        name: "03-Jan-2021",
+                        value: Jan2021P[2]
+                    },
+                    {
+                        name: "04-Jan-2021",
+                        value: Jan2021P[3]
+                    }, {
+                        name: "05-Jan-2021",
+                        value: Jan2021P[4]
+                    },
+                    {
+                        name: "06-Jan-2021",
+                        value: Jan2021P[5]
+                    },
+                    {
+                        name: "07-Jan-2021",
+                        value: Jan2021P[6]
+                    }, {
+                        name: "08-Jan-2021",
+                        value: Jan2021P[7]
+                    },
+                    {
+                        name: "09-Jan-2021",
+                        value: Jan2021P[8]
+                    },
+                    {
+                        name: "10-Jan-2021",
+                        value: Jan2021P[9]
+                    }, {
+                        name: "11-Jan-2021",
+                        value: Jan2021P[10]
+                    },
+                    {
+                        name: "12-Jan-2021",
+                        value: Jan2021P[11]
+                    },
+                    {
+                        name: "13-Jan-2021",
+                        value: Jan2021P[12]
+                    }, {
+                        name: "14-Jan-2021",
+                        value: Jan2021P[13]
+                    },
+                    {
+                        name: "15-Jan-2021",
+                        value: Jan2021P[14]
+                    },
+                    {
+                        name: "16-Jan-2021",
+                        value: Jan2021P[15]
+                    }, {
+                        name: "17-Jan-2021",
+                        value: Jan2021P[16]
+                    },
+                    {
+                        name: "18-Jan-2021",
+                        value: Jan2021P[17]
+                    },
+                    {
+                        name: "19-Jan-2021",
+                        value: Jan2021P[18]
+                    }, {
+                        name: "20-Jan-2021",
+                        value: Jan2021P[19]
+                    },
+                    {
+                        name: "21-Jan-2021",
+                        value: Jan2021P[20]
+                    },
+                    {
+                        name: "22-Jan-2021",
+                        value: Jan2021P[21]
+                    }, {
+                        name: "23-Jan-2021",
+                        value: Jan2021P[22]
+                    },
+                    {
+                        name: "24-Jan-2021",
+                        value: Jan2021P[23]
+                    },
+                    {
+                        name: "25-Jan-2021",
+                        value: Jan2021P[24]
+                    }, {
+                        name: "26-Jan-2021",
+                        value: Jan2021P[25]
+                    },
+                    {
+                        name: "27-Jan-2021",
+                        value: Jan2021P[26]
+                    },
+                    {
+                        name: "28-Jan-2021",
+                        value: Jan2021P[27]
+                    },
+                    {
+                        name: "29-Jan-2021",
+                        value: Jan2021P[28]
+                    },
+                    {
+                        name: "30-Jan-2021",
+                        value: Jan2021P[29]
+                    },
+                    {
+                        name: "31-Jan-2021",
+                        value: Jan2021P[30]
+                    }]
         }]
         }
     );
