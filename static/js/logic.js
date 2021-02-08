@@ -163,7 +163,403 @@ function getWaterData() {
         0.4,0.43,.41,0.41,0.41,0.41,0.4,0.41,0.4,0.41,0.4,0.66,0.56,0.39,0.38,];
 
     // Third chart
-    
+    Highcharts.chart('container', {
+        chart: {
+            type: 'packedbubble',
+            height: '100%'
+        },
+        title: {
+            text: 'Carbon emissions around the world (2014)'
+        },
+        tooltip: {
+            useHTML: true,
+            pointFormat: '<b>{point.name}:</b> {point.value}m CO<sub>2</sub>'
+        },
+        plotOptions: {
+            packedbubble: {
+                minSize: '20%',
+                maxSize: '100%',
+                zMin: 0,
+                zMax: 1000,
+                layoutAlgorithm: {
+                    gravitationalConstant: 0.05,
+                    splitSeries: true,
+                    seriesInteraction: false,
+                    dragBetweenSeries: true,
+                    parentNodeLimit: true
+                },
+                dataLabels: {
+                    enabled: true,
+                    format: '{point.name}',
+                    filter: {
+                        property: 'y',
+                        operator: '>',
+                        value: 250
+                    },
+                    style: {
+                        color: 'black',
+                        textOutline: 'none',
+                        fontWeight: 'normal'
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'January 2019 Finished Water',
+            data: [{
+                name: "01-Jan-2019",
+                value: Jan2019F[0]
+            }, {
+                name: "02-Jan-2019",
+                value: Jan2019F[1]
+            },
+            {
+                name: "03-Jan-2019",
+                value: Jan2019F[2]
+            },
+            {
+                name: "04-Jan-2019",
+                value: Jan2019F[3]
+            }, {
+                name: "05-Jan-2019",
+                value: Jan2019F[4]
+            },
+            {
+                name: "06-Jan-2019",
+                value: Jan2019F[5]
+            },
+            {
+                name: "07-Jan-2019",
+                value: Jan2019F[6]
+            }, {
+                name: "08-Jan-2019",
+                value: Jan2019F[7]
+            },
+            {
+                name: "09-Jan-2019",
+                value: Jan2019F[8]
+            },
+            {
+                name: "10-Jan-2019",
+                value: Jan2019F[9]
+            }, {
+                name: "11-Jan-2019",
+                value: Jan2019F[10]
+            },
+            {
+                name: "12-Jan-2019",
+                value: Jan2019F[11]
+            },
+            {
+                name: "13-Jan-2019",
+                value: Jan2019F[12]
+            }, {
+                name: "14-Jan-2019",
+                value: Jan2019F[13]
+            },
+            {
+                name: "15-Jan-2019",
+                value: Jan2019F[14]
+            },
+            {
+                name: "16-Jan-2019",
+                value: Jan2019F[15]
+            }, {
+                name: "17-Jan-2019",
+                value: Jan2019F[16]
+            },
+            {
+                name: "18-Jan-2019",
+                value: Jan2019F[17]
+            },
+            {
+                name: "19-Jan-2019",
+                value: Jan2019F[18]
+            }, {
+                name: "20-Jan-2019",
+                value: Jan2019F[19]
+            },
+            {
+                name: "21-Jan-2019",
+                value: Jan2019F[20]
+            },
+            {
+                name: "22-Jan-2019",
+                value: Jan2019F[21]
+            }, {
+                name: "23-Jan-2019",
+                value: Jan2019F[22]
+            },
+            {
+                name: "24-Jan-2019",
+                value: Jan2019F[23]
+            },
+            {
+                name: "25-Jan-2019",
+                value: Jan2019F[24]
+            }, {
+                name: "26-Jan-2019",
+                value: Jan2019F[25]
+            },
+            {
+                name: "27-Jan-2019",
+                value: Jan2019F[26]
+            },
+            {
+                name: "28-Jan-2019",
+                value: Jan2019F[27]
+            },
+            {
+                name: "29-Jan-2019",
+                value: Jan2019F[28]
+            },
+            {
+                name: "30-Jan-2019",
+                value: Jan2019F[29]
+            },
+            {
+                name: "31-Jan-2019",
+                value: Jan2019F[30]
+            }
+            ]
+        }, {
+            name: 'January 2020 Finished Water',
+            data: [{
+                name: "01-Jan-2019",
+                value: Jan2019F[0]
+            }, {
+                name: "02-Jan-2019",
+                value: Jan2019F[1]
+            },
+            {
+                name: "03-Jan-2019",
+                value: Jan2019F[2]
+            },
+            {
+                name: "04-Jan-2019",
+                value: Jan2019F[3]
+            }, {
+                name: "05-Jan-2019",
+                value: Jan2019F[4]
+            },
+            {
+                name: "06-Jan-2019",
+                value: Jan2019F[5]
+            },
+            {
+                name: "07-Jan-2019",
+                value: Jan2019F[6]
+            }, {
+                name: "08-Jan-2019",
+                value: Jan2019F[7]
+            },
+            {
+                name: "09-Jan-2019",
+                value: Jan2019F[8]
+            },
+            {
+                name: "10-Jan-2019",
+                value: Jan2019F[9]
+            }, {
+                name: "11-Jan-2019",
+                value: Jan2019F[10]
+            },
+            {
+                name: "12-Jan-2019",
+                value: Jan2019F[11]
+            },
+            {
+                name: "13-Jan-2019",
+                value: Jan2019F[12]
+            }, {
+                name: "14-Jan-2019",
+                value: Jan2019F[13]
+            },
+            {
+                name: "15-Jan-2019",
+                value: Jan2019F[14]
+            },
+            {
+                name: "16-Jan-2019",
+                value: Jan2019F[15]
+            }, {
+                name: "17-Jan-2019",
+                value: Jan2019F[16]
+            },
+            {
+                name: "18-Jan-2019",
+                value: Jan2019F[17]
+            },
+            {
+                name: "19-Jan-2019",
+                value: Jan2019F[18]
+            }, {
+                name: "20-Jan-2019",
+                value: Jan2019F[19]
+            },
+            {
+                name: "21-Jan-2019",
+                value: Jan2019F[20]
+            },
+            {
+                name: "22-Jan-2019",
+                value: Jan2019F[21]
+            }, {
+                name: "23-Jan-2019",
+                value: Jan2019F[22]
+            },
+            {
+                name: "24-Jan-2019",
+                value: Jan2019F[23]
+            },
+            {
+                name: "25-Jan-2019",
+                value: Jan2019F[24]
+            }, {
+                name: "26-Jan-2019",
+                value: Jan2019F[25]
+            },
+            {
+                name: "27-Jan-2019",
+                value: Jan2019F[26]
+            },
+            {
+                name: "28-Jan-2019",
+                value: Jan2019F[27]
+            },
+            {
+                name: "29-Jan-2019",
+                value: Jan2019F[28]
+            },
+            {
+                name: "30-Jan-2019",
+                value: Jan2019F[29]
+            },
+            {
+                name: "31-Jan-2019",
+                value: Jan2019F[30]
+            }
+            ]
+        }, {
+            name: 'January 2021 Finished Water',
+            data: [{
+                name: "01-Jan-2019",
+                value: Jan2019F[0]
+            }, {
+                name: "02-Jan-2019",
+                value: Jan2019F[1]
+            },
+            {
+                name: "03-Jan-2019",
+                value: Jan2019F[2]
+            },
+            {
+                name: "04-Jan-2019",
+                value: Jan2019F[3]
+            }, {
+                name: "05-Jan-2019",
+                value: Jan2019F[4]
+            },
+            {
+                name: "06-Jan-2019",
+                value: Jan2019F[5]
+            },
+            {
+                name: "07-Jan-2019",
+                value: Jan2019F[6]
+            }, {
+                name: "08-Jan-2019",
+                value: Jan2019F[7]
+            },
+            {
+                name: "09-Jan-2019",
+                value: Jan2019F[8]
+            },
+            {
+                name: "10-Jan-2019",
+                value: Jan2019F[9]
+            }, {
+                name: "11-Jan-2019",
+                value: Jan2019F[10]
+            },
+            {
+                name: "12-Jan-2019",
+                value: Jan2019F[11]
+            },
+            {
+                name: "13-Jan-2019",
+                value: Jan2019F[12]
+            }, {
+                name: "14-Jan-2019",
+                value: Jan2019F[13]
+            },
+            {
+                name: "15-Jan-2019",
+                value: Jan2019F[14]
+            },
+            {
+                name: "16-Jan-2019",
+                value: Jan2019F[15]
+            }, {
+                name: "17-Jan-2019",
+                value: Jan2019F[16]
+            },
+            {
+                name: "18-Jan-2019",
+                value: Jan2019F[17]
+            },
+            {
+                name: "19-Jan-2019",
+                value: Jan2019F[18]
+            }, {
+                name: "20-Jan-2019",
+                value: Jan2019F[19]
+            },
+            {
+                name: "21-Jan-2019",
+                value: Jan2019F[20]
+            },
+            {
+                name: "22-Jan-2019",
+                value: Jan2019F[21]
+            }, {
+                name: "23-Jan-2019",
+                value: Jan2019F[22]
+            },
+            {
+                name: "24-Jan-2019",
+                value: Jan2019F[23]
+            },
+            {
+                name: "25-Jan-2019",
+                value: Jan2019F[24]
+            }, {
+                name: "26-Jan-2019",
+                value: Jan2019F[25]
+            },
+            {
+                name: "27-Jan-2019",
+                value: Jan2019F[26]
+            },
+            {
+                name: "28-Jan-2019",
+                value: Jan2019F[27]
+            },
+            {
+                name: "29-Jan-2019",
+                value: Jan2019F[28]
+            },
+            {
+                name: "30-Jan-2019",
+                value: Jan2019F[29]
+            },
+            {
+                name: "31-Jan-2019",
+                value: Jan2019F[30]
+            }]
+        }]
+        }
+    );
 
 })};
 getWaterData();
