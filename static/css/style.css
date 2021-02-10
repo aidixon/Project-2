@@ -2,7 +2,7 @@ p {
     text-align: left;
     font-size: 20px;
     font-weight: bold;
-    color: whitesmoke;
+    color: red;
 }
 
 h1 {
@@ -21,5 +21,9 @@ h2 {
 
 h3 {
     text-align: center;
+    color: whitesmoke;
+}
+
+strong {
     color: whitesmoke;
 }

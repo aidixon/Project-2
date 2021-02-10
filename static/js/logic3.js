@@ -81,7 +81,7 @@ function getWaterData() {
             width: 1600
         },
         title: {
-            text: 'Water Turbidity'
+            text: 'January Annual Comparison'
         },
         tooltip: {
             useHTML: true,
