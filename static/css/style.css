@@ -1,0 +1,15 @@
+p {
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    color: darkblue;
+}
+
+h1 {
+    text-align: center;
+    color: darkblue;
+}
+
+.highcharts-figure {
+    max-width: 2000px;
+}
