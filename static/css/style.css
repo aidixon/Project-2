@@ -2,14 +2,24 @@ p {
     text-align: left;
     font-size: 20px;
     font-weight: bold;
-    color: darkblue;
+    color: whitesmoke;
 }
 
 h1 {
     text-align: center;
-    color: darkblue;
+    color: whitesmoke;
 }
 
 .highcharts-figure {
     max-width: 2000px;
+}
+
+h2 {
+    text-align: center;
+    color: whitesmoke;
+}
+
+h3 {
+    text-align: center;
+    color: whitesmoke;
 }

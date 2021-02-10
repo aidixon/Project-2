@@ -77,7 +77,8 @@ function getWaterData() {
     Highcharts.chart('container', {
         chart: {
             type: 'packedbubble',
-            height: '100%'
+            height: '40%',
+            width: 1600
         },
         title: {
             text: 'Water Turbidity'

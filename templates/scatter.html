@@ -17,7 +17,7 @@
     
     <style>
         body {
-            background-color: rgb(0, 238, 255);
+            background-color:  rgb(0, 0, 0);
         }
 th, td {
     text-align: left;
@@ -31,13 +31,28 @@ tbody>tr:nth-child(odd){background-color: #fff !important}
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="#">Scatter Plot</a>
+              <a class="nav-link" href = "../index.html"><strong>Home</strong></a>
+              <a class="nav-link" href="lines.html"><strong>Line Chart</strong></a>
+              <a class="nav-link" href = "packed.html"><strong>Packed Bubble Chart</strong></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+
     <h1>Fort Collins Water Quality Analysis</h1>
-    <h2>Pages</h2>
-    <ul>
-        <li><a href ="../index.html">Home</a></li>
-    </ul>
+    <h2>Scatter Plot</h2>
+
     <!-- section for the first plot using Plotly-->
-    <div class = "col-sm-12">
+    <div class = "col-md-6">
         <div class= "panel panel-default">
             <div id = "plot-1"></div>
                 <p>This chart includes an overall view of the turbidity measurements for finished and raw water.</p>

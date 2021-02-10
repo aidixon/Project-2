@@ -72,12 +72,18 @@ function getWaterData() {
     }
 
     var layout = {
-        title: "Fort Collins Water Turbidity",
-        width: 1300,
-        height: 500,
+        title: "Water Turbidity",
+        xaxis: {
+            title: "Date",
+        },
+        yaxis: {
+            title: "Turbidity Measurement (NTU)"
+        },
+        width: 1500,
+        height: 650,
         margin: {
-            l: 20,
-            b: 92,
+            l: 50,
+            b: 120,
             t: 50
         }
     }
@@ -99,14 +105,21 @@ function getWaterData() {
 
     var layout2 = {
         title: "Finished Water Closer Analysis",
-        width: 1300,
-        height: 400,
+        xaxis: {
+            title: "Date",
+        },
+        yaxis: {
+            title: "Turbidity Measurement (NTU)"
+        },
+        width: 1700,
+        height: 600,
         margin: {
-            l: 40,
-            b: 95,
+            l: 70,
+            b: 120,
             t: 60,
         }
     }
+    
     var data = [trace4];
 
     Plotly.newPlot("plot-2", data, layout2);
