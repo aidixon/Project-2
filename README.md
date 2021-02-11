@@ -30,5 +30,5 @@ Based on the analysis of the data obtained from the water plant's public source,
 
 
 
-Citation
+Citation :
 Water Quality Control Commission. “Code of Colorado Regulations.” Code of Colorado Regulations, 1 July 2013, www.sos.state.co.us/CCR/GenerateRulePdf.do?ruleVersionId=5613&fileName=5%20CCR%201002-11.
